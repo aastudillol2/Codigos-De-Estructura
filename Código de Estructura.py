@@ -91,8 +91,8 @@ class Operaciones:
         print ("El número decimal es: ".format(conversion))
 
 #Ejercicio 11
-    def separarUnidades (self):
-
+    def separarUnidades (self)
+    
         self.num5 = int(input("Ingrese un número conformado por 4 dígitos: "))
     
         if self.num5 > 1000 and self.num5 < 9999:
@@ -205,6 +205,39 @@ class Operaciones:
                 print("Todos son iguales ")
         else:
             print("Digite un número mayor a 0")
+            
+#Ejercicio 6 - Parte 2 
+    def estacionamiento (self):
+        tiempoe = [0, 0, "", 0, 0, ""]
+        tiempos = [0]*2
+        pbs = ["Su hora de ingreso al estacionamiento es: ", "Los minutos excedentes de entrada", 2, "Hora de partida del estacionamiento", "Los minutos excedentes de salida", 5]
+        ct = 0
+
+        for i in pbs:
+            if (ct != 2 or ct != 5):
+                if (i != 2 and i != 5):
+                    tiempoe[ct] = int(input("Ingrese {}: ".format(i)))
+                ct += 1
+            if ct == 2 or ct == 5:
+                horario = input("La hora que ingresada, ¿Es A.M o P.M? ")
+                tiempoe[(pbs[ct])] = horario
+
+        tiempos[0] = (tiempoe[0] * 3600) + (tiempoe[1] * 60)
+        tiempos[1] = (tiempoe[3] * 3600) + (tiempoe[4] * 60)
+
+        if tiempoe[2] == tiempoe[5]:
+            nhp = tiempos[1] - tiempos[0]
+        else:
+            nhp = (43200 - tiempos[0]) + tiempos[1]
+
+        tiempos[0] = (nhp-(nhp % 3600)) / 3600
+        tiempos[1] = (nhp%3600)/60
+        print(tiempos)
+        mp = tiempos[0] * 4
+
+        if tiempos[1] >= 30:
+            mp = mp + 2.50
+        print("El dueño del vehículo deberá pagar Bs. ",mp)
 
 #Ejercicio 7 - Parte 2 
     def pesoCorporal (self):
