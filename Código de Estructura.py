@@ -16,10 +16,10 @@ class Operaciones:
         e = self.num1 % self.num2
 
         print ("El resultado de la suma es: {} ".format (a))
-        print ("El resultado de la suma es: {} ".format (b))
-        print ("El resultado de la suma es: {} ".format (c))
-        print ("El resultado de la suma es: {} ".format (c))
-        print ("El resultado de la suma es: {} ".format (e))
+        print ("El resultado de la resta es: {} ".format (b))
+        print ("El resultado de la multiplicación es: {} ".format (c))
+        print ("El resultado de la división es: {} ".format (c))
+        print ("El resultado de la módulo es: {} ".format (e))
 
 #Ejercicio 5
     def resolvente (self):
